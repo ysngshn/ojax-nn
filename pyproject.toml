@@ -1,0 +1,26 @@
+[project]
+name = "ojax-nn"
+authors = [
+  {name="Yuesong Shen"},
+]
+description = "A (hopefully) less awkward JAX-based neural network library."
+readme = "readme.md"
+license = {text="Apache-2.0"}
+requires-python = ">=3.10"
+dependencies = [
+  "numpy", "jax", "jaxlib", "ojax", "matplotlib", "optax",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/ysngshn/ojax-nn"
+
+[build-system]
+requires = ["setuptools >= 61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["ojnn"]
+
+[tool.setuptools.dynamic]
+version = {attr = "ojnn.__version__"}
